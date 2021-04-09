@@ -20,8 +20,7 @@ function setup(){
     polygon = Bodies.circle(50,200,20);
     World.add(world,polygon);
 
-    imageMode(CENTER);
-    image(polygon_img,polygon.position.x,polygon.position.y,40,40);
+   
 
     slingshot = new SlingShot(polygon,{x:100,y:100});
 
@@ -50,7 +49,7 @@ function setup(){
 
 }
 function draw(){
-
+background("white");
     Engine.update(engine);
     ground1.display();
     stand.display();
@@ -71,6 +70,12 @@ function draw(){
      block15.display();
      block16.display();
     slingshot.display();
+  //  ellipseMode(RADIUS)
+    // ellipse(polygon.position.x,polygon.position.y,20,20); 
+    imageMode(CENTER);
+    image(polygon_img,polygon.position.x,polygon.position.y,40,40);
+
+
 };
 
 function mouseDragged(){
